@@ -1,0 +1,71 @@
+/*
+- - - > |  @font-face  | < - - - 
+*/
+/* Bryant Web Regular */
+@font-face {
+	font-family: 'BryantWebRegular';
+	src: url('./webfonts/BryantWebRegular.eot');
+	src: url('./webfonts/BryantWebRegular.eot?#iefix') format('embedded-opentype'),
+         url('./webfonts/BryantWebRegular.woff2') format('woff2'),
+         url('./webfonts/BryantWebRegular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+/*
+- - - > |  Font Classes  | < - - - 
+*/
+.BryantWebRegular {
+	font-family: 'BryantWebRegular';
+	font-weight: normal;
+	font-style: normal;
+	}
+
+/* CUSTOM CSS */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'BryantWebRegular', sans-serif;
+	font-weight: normal;
+    font-style: normal;
+}
+
+.lead {
+    font-weight: bold;
+}
+
+.navbar {
+    background-color: #fff;
+}
+
+.jumbotron {
+    background-image: url("./images/grid-background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0px;
+}
+
+.container-fluid {
+    padding-top: 50px;
+}
+
+img {
+    max-width: 100%;
+}
+
+#logo {
+    line-height: 70pt;
+   /* letter-spacing: -1pt; */
+}
+
+.services {
+    background-color: #f8f8f8;
+    padding: 5px;
+    margin: 10px;
+}
+
+#copyright {
+    font-size: 0.7em;
+    margin: auto;
+    text-align: center;
+}

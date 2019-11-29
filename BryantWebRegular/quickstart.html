@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+<head>
+<!--
+--------------------------------------------------------
+--------------------------------------------------------
+    _____                             ______)          
+   (, /   )                          (, /              
+    _/__ / __  _____  _  _   _         /       __    _ 
+    /     / (_(_)(___(/_/_)_/_)_    ) /   (_/_ /_)__(/_
+ ) /                               (_/   .-/.-/        
+(_/                                     (_/(_/         
+   ________)                    
+  (, /                 /)       
+    /___, ___   __   _(/ __     
+ ) /     (_)(_(_/ (_(_(_/ (_(_/______-’             v3
+(_/                        .-/  
+                          (_/   
+--------------------------------------------------------
+--------------------------------------------------------
+-->
+<meta charset="utf-8"/>
+<style>
+body {
+  margin: 0;
+  padding: 175px 0 0 0;
+  -moz-transition: padding-top 0.5s ease;
+  -o-transition: padding-top 0.5s ease;
+  -webkit-transition: padding-top 0.5s ease;
+  transition: padding-top 0.5s ease;
+  font-family: helvetica, arial, verdana, sans-serif;
+  }
+.wrapper {
+  width: 1060px;
+  margin: 0 auto;
+  }
+.content {
+  margin: 0 210px;
+  }
+p, li, p a,  li a {
+  font-size: 16px;
+  line-height: 23px;
+  color: #252525;
+  } 
+ul {
+  list-style-position: outside;
+  padding-left: 19px;
+  } 
+code {
+  background: #f4f4f4;
+  padding: 2px;
+  margin 0 2px;
+  font-size: 90%;
+  color: #000;
+  white-space: nowrap;
+  }  
+pre {
+  font-family: monospace;
+  display: block;
+  background-color: #f4f4f4;
+  border-left: 3px solid #0099ff;
+  line-height: 18px;
+  margin: 16px 0;
+  padding: 8px 12px;
+  overflow: auto;
+  white-space: pre;
+  z-index: 9;
+  position: relative;
+  }
+.indent {
+  margin: 36px 0;
+  padding: 4px 26px;
+  border: 1px solid #d8d8d8;
+  display: block;
+  border-radius: 5px;
+  }
+.indent h4, .indent h3 {
+  margin: 18px 0 -11px 0;
+  }
+h3 {
+  padding: 0;
+  margin: 46px 0 -11px 0;
+  }
+h4 {
+  padding: 0;
+  margin: 23px 0 -11px 0;
+  }
+h2{
+  color: #0099ff;
+  font-size: 28px;
+  }
+header {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  text-align: center;
+  position: relative;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-overflow-scrolling: touch;
+  overflow:touch;
+  z-index:10;
+  }
+header h1 {
+  font-size: 34px;
+  color: #fff;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  }
+header p {
+  color: #888;
+  width: 525px;
+  margin: 0 auto;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  }
+header p a {
+  color: #888;
+  }
+header nav {
+  margin: 0 auto;
+  height: 300px;
+  line-height: 30px;
+  width: 80%;
+  background-color: black;
+  }
+header nav a {
+  width: 350px;
+  display: block;
+  padding: 18px 22px;
+  margin: 26px auto;
+  background: #0099ff;
+  border: 1px solid #0099ff;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  }
+header nav a:hover {
+  color: #0099ff;
+  background: none;
+  border: 1px solid #0099ff;
+  }
+.logo {
+  height: 38px;
+  width: auto;
+  margin: 150px auto 0 auto;
+  }
+footer .logo {
+  margin: 0 auto;
+  }
+.choose {
+  margin: 80px auto 10px auto;
+  font-size: 22px;
+  font-weight:bold;
+  color: #fff;
+  }
+em {
+  font-style: normal;
+  font-weight: bold;
+  }
+footer {
+  text-align: center;
+  border-top: 1px solid #d8d8d8;
+  margin: 100px auto;
+  padding: 50px 0 0 0;
+  font-size: 12px;
+line-height: 20px;
+  color: #bdbdbd;
+  }
+footer p {
+  font-size: 16px;
+  }
+footer h4 {
+  font-size: 18px;
+  color: #000;
+  }
+.tagline {
+  color: #888;
+  font-size: 15px;
+  }
+footer a {
+  color: #0099ff;
+    font-size: 15px;
+  }
+.red {
+  color: #d20;
+  }
+body.sticky-header header h1, 
+body.sticky-header header p {
+  -moz-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -webkit-transform: scale(0, 0);
+  transform: scale(0, 0);
+  }
+body.sticky-header {
+  padding-top: 175px;
+  }
+body.sticky-header header {
+  height: 60px;
+  }
+body.sticky-header header nav {
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  background-color: black;
+  border: none;
+  }
+body.sticky-header header nav a {
+    background: none;
+    display: inline-block;
+    border: none;
+	padding: 22px;
+	margin:0;
+	width: 295px;
+    border-radius: 0;
+    height: 60px;
+    font-weight: normal;
+  }
+body.sticky-header header nav a:hover {
+  color: #0099ff;
+  }
+body.sticky-header header nav a.active {
+  background: #363636;
+  font-weight: bold;
+  }
+div#step:before,
+div#codeonly:before,
+h3#classes:before { 
+  display: block; 
+  content: " "; 
+  margin-top: -75px; 
+  height: 75px; 
+  visibility: hidden; 
+  }
+</style>
+</head>
+
+<body>
+
+ <header>
+    <img class="logo" src="webfonts/index-files/logo-circle-500.png">
+    <h1>Webfonts Quick Start Guide</h1>
+    <p>This quick start guide is just that &ndash; it&rsquo;s meant to get you rolling, but there&rsquo;s plenty in here you could alter based on the priorities of your site. It assumes you&rsquo;re already familiar with the basic process of building a website and things like paths, CSS, HTML and FTP. Ok, caveats out of the way... let&rsquo;s set up some webfonts!</p>
+    <p class="choose"> Show:</P>
+    <nav id="nav">
+      <a href="#step">Step-by-Step Instructions</a> 
+      <a href="#codeonly">Just the Code</a>
+    </nav>
+  </header>
+  
+<div class="wrapper">
+	<div class="content" id="step">
+	
+	<h2>Step-by-Step Instructions</h2>
+
+	<h3>1) Upload the webfonts folder to your server</h3>
+	<p>Upload the <em>webfonts</em> folder to your server&rsquo;s root directory. The root directory is usually the first directory that is open when you log into your server but not always. Sometimes it&rsquo;s a folder called <em>public_html</em> or <em>www</em>.</p>
+
+	<h3>2) &lt;link&gt; to font-styles.css</h3>
+	<p>The next step is to <code>&lt;link&gt;</code> to <em>font-styles.css</em>. Copy and paste the <code>&lt;link&gt;</code> below into any HTML page on your site that will use the fonts. It goes between the <code>&lt;head&gt;</code> tags.</p>
+	
+	<pre>
+&lt;link href="webfonts/font-styles.css" rel="stylesheet" type="text/css"&gt;</pre>
+
+	<h3>3) Style some text or edit your CSS</h3>
+	<p>Now, set some text in your webfont. Find pre-written classes in <em>webfonts/font-styles.css</em> or <a href="#classes">jump to the code-only section</a> and find them there. Either choose a class to apply or use them as the basis for your own styles.<p>
+
+	<p>Here&rsquo;s an example of applying a class to text on your page.</p>
+
+	<pre>
+&lt;p class="BryantWebRegular"&gt;
+  Set this text in Bryant Web Regular!
+&lt;/p&gt;</pre>
+
+	<p>You could also set any text in the <code>&lt;body&gt;</code> to the fonts of your choosing by adding a new block to your CSS. The sample below changes any text in the <code>&lt;body&gt;</code> to Bryant Web Regular:</p>
+
+	<pre>
+body {
+	font-family: 'BryantWebRegular';
+	font-weight: normal;
+	font-style: normal;
+	}
+</pre>
+	
+	<p>This same technique can also be applied to any HTML tag like <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code> or <code>&lt;h1&gt;</code>.</p>
+
+<div class="indent">
+<h4>A note about weight designations.</h4> 
+<p>In font packages with multiple weights, the different weights are designated by number. For example, instead of seeing <code>font-weight: bold;</code>, you&rsquo;ll see <code>font-weight: 400;</code>. Use the class names of the styles provided in this guide to help differentiate between weights in larger families.</p>
+</div>
+
+<h3>4) Test and Troubleshoot</h3>
+	<p>Now that you&rsquo;ve uploaded the webfonts folder, added the <code>&lt;link&gt;</code> and styled some text, the webfonts should show up on your web page. If they don&rsquo;t, give the following a try to help narrow down the problem:</p>
+
+<h4>a) Check the basics</h4>
+<ul>
+<li><em>Miss any steps?</em> Go back through the steps above and make sure you didn&rsquo;t miss anything.</li>
+<li><em>Check your paths.</em> If you renamed the <em>webfonts</em> folder or put it anywhere other than the root, you&rsquo;ll need to rewrite paths. Check the paths to the fonts in the @font-face declarations in <em>webfonts/font-styles.css</em> and the path to <em>font-styles.css</em> in the <code>&lt;link&gt;</code>.</li>
+<li><em>Did you style any text in your HTML page?</em> If you used classes, check the spelling of the class and make sure it matches its mate in the stylesheet. Double check that the starting period that defines a class in the stylesheet didn&rsquo;t end up in your HTML where you refer to that class.</li>
+<li><em>Check your syntax.</em> Missing or misplaced commas, quotes, braces, colons or semi colons cause a lot of heartbreak. If you modified the @font-face code or added styles, check your syntax to make sure everything is in its proper spots. Also check that you don&rsquo;t have any curly quotes in your code (curly quotes in text are great, but they tend to break things in HTML and CSS).</li>
+</ul>
+
+<h4>b) Dig deeper</h4>
+<p>When you think you&rsquo;ve got the basics down but the fonts still aren&rsquo;t loading, it&rsquo;s time to narrow down the source of the issue. If you uploaded the <em>webfonts</em> folder in its entirety to your server&rsquo;s root, then you&rsquo;re all set for this test. If not, do that now &ndash; drop the entire <em>webfonts</em> folder on your server. This test only works if you haven&rsquo;t made modifications to its contents.</p> 
+
+<p>Now, put its URL (below) in your browser&rsquo;s address bar and hit enter. Make sure to replace everything in red with your own domain name.</p> 
+
+<pre>
+http://<span class="red">yourdomain.com</span>/webfonts/</pre>
+
+<p>With a correct address, a sample specimen page will load and show your purchased webfont(s) in any browser that supports @font-face and our font formats. If the fonts fail to load, you&rsquo;ll see Comic Sans or a web-safe serif font. We promise that&rsquo;s not a type design joke &ndash; it makes recognizing that the fonts failed to load an easier task.</p> 
+
+<p>If you see your purchased webfonts, it tells you that most likely, the basics are still off &ndash; paths, syntax, missing webfonts, etc. &ndash; but that once those are righted, the fonts will load. If the webfonts didn&rsquo;t load, it means you'll probably have to look beyond the basics to find your issue since the folder contains working code. If you&rsquo;ve scoured your code and checked that the webfonts were uploaded to your server, then it&rsquo;s probably time to expand your troubleshooting to variables specific to your server or site set up. A few examples are things like mime types, mod_rewrites, and cross-origin resource sharing. Try using your browser&rsquo;s built-in development tools to locate the problem and search, search, search.
+</p>
+
+
+<div class="indent">
+  <h3>Good to know</h3> 
+  <ul>
+   <li>Our webfont license doesn&rsquo;t allow serving TTFs and SVGs.</li>
+   <li>It is ok, and even desirable, to leave the <em>index.html</em> file in the webfonts folder. This makes the font files less open to indexing and download though search engines.</li>
+  <li>If you read all the way to this point and want to throw your computer out the window, keep in mind <a href="http://typekit.com" target="_blank">Typekit</a> is an option. The link to activate the fonts in Typekit is found in your account after logging in and locating your order. Have a look at our <a href="http://processtypefoundry.com/help/base/how-can-i-use-your-fonts-with-typekit/" target="_blank">Help section</a> for more information.</li>
+  </ul>
+</div>
+	</div>
+
+	<div class="content" id="codeonly">
+	<h2>Just the Code</h2>
+	
+	<h3>Stylesheet Link</h3>
+	<pre>
+&lt;link href="webfonts/font-styles.css" rel="stylesheet" type="text/css"&gt;</pre>
+
+<h3>@font-face</h3>
+<pre>
+/* Bryant Web Regular */
+	@font-face {
+	font-family: 'BryantWebRegular';
+	src: url('BryantWebRegular.eot');
+	src: url('BryantWebRegular.eot?#iefix') format('embedded-opentype'),
+         url('BryantWebRegular.woff2') format('woff2'),
+         url('BryantWebRegular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	}
+</pre>
+
+<h3 id="classes">Classes</h3>
+
+<pre>
+.BryantWebRegular {
+	font-family: 'BryantWebRegular';
+	font-weight: normal;
+	font-style: normal;
+	}
+</pre>
+	</div>
+	
+<div class="content">
+  	<div class="indent">
+  	<h3>Bonus: OpenType Features</h3> 
+  	<p>The following is a list of OpenType feature found in this font. &lsquo;Ligatures&rsquo; will be listed for most fonts but it may be just dry ligatures like /fi or /fl. While OpenType feature support in browsers is growing, it&rsquo;s not 100% yet. To implement any of the features, check out <a href="https://helpx.adobe.com/typekit/using/open-type-syntax.html" target="_blank">Typekit&rsquo;s comprehensive guide</a>.</p>
+  	<ul>
+		<li>Ligatures (liga)</li>
+<li>Ornaments, usually arrows (ornm)</li>
+<li>Stylistic alternates (salt)</li>
+<li>Stylistic set 1 (ss01)</li>
+
+  	</ul>
+  	<p></p>
+  	</div>
+</div>
+
+  <footer>   
+	<img class="logo" src="webfonts/index-files/logo-circle-500.png">     
+    <h4>Process Type Foundry</h4>
+	<p class="tagline">Original typefaces <br>for today&rsquo;s designers.</p>
+	<p><a href="http://processtypefoundry.com">processtypefoundry.com</a></p>
+	<br />
+	&copy; 2016 &ndash; 2018 Process Type Foundry, LLC<br>All rights reserved
+  </footer>
+</div>
+
+<script src='webfonts/index-files/jquery-3.1.0.min.js'></script>
+<script type="text/javascript">
+// Source: http://codepen.io/soulrider911/pen/dGuEn
+ $(function(){
+   $(window).scroll(function(){
+     var winTop = $(window).scrollTop();
+     if(winTop >= 30){
+       $("body").addClass("sticky-header");
+     }else{
+       $("body").removeClass("sticky-header");
+     }
+   });
+ });
+
+ $("#nav").on('click','a',function(){
+     $("#nav a.active").removeClass("active"); 
+     $(this).addClass("active"); 
+ });
+</script>
+</body>
+</html>

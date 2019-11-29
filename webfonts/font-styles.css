@@ -1,0 +1,22 @@
+/*
+- - - > |  @font-face  | < - - - 
+*/
+/* Bryant Web Regular */
+	@font-face {
+	font-family: 'BryantWebRegular';
+	src: url('BryantWebRegular.eot');
+	src: url('BryantWebRegular.eot?#iefix') format('embedded-opentype'),
+         url('BryantWebRegular.woff2') format('woff2'),
+         url('BryantWebRegular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+/*
+- - - > |  Font Classes  | < - - - 
+*/
+.BryantWebRegular {
+	font-family: 'BryantWebRegular';
+	font-weight: normal;
+	font-style: normal;
+	}
