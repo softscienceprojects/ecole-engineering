@@ -80,10 +80,17 @@ img {
 }
 
 .services li {
-    list-style-type: square;
+   /* list-style-type: square; */
+    list-style: none;
     margin-left: -20px;
     font-family: 'BryantWebRegular', sans-serif;
 	font-weight: normal;
+}
+
+.services li:before {    
+    font-family: 'FontAwesome';
+    content: '\f105'; /*check: f00c */
+    margin:0 5px 0 -15px;
 }
 
 #copyright {
