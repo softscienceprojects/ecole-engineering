@@ -21,6 +21,20 @@
 	font-style: normal;
 	}
 
+/*
+- - - > |  Mobile | < - - - 
+*/
+
+@media only screen
+and (max-device-width: 600px)
+and (orientation: portrait) {
+    #logo {
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 0.5rem;
+    }
+}
+
 /* CUSTOM CSS */
 
 h1, h2, h3, h4, h5, h6 {
@@ -55,7 +69,6 @@ img {
 
 #logo {
     line-height: 70pt;
-   /* letter-spacing: -1pt; */
 }
 
 .services {
