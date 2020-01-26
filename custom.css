@@ -37,7 +37,7 @@ and (orientation: portrait) {
 
 /* CUSTOM CSS */
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
     font-family: 'BryantWebRegular', sans-serif;
 	font-weight: normal;
     font-style: normal;
@@ -73,9 +73,17 @@ img {
 }
 
 .services {
-    background-color: #f8f8f8;
+    background-color: #222A32;
     padding: 5px;
     margin: 10px;
+    color: #fff;
+}
+
+.services li {
+    list-style-type: square;
+    margin-left: -20px;
+    font-family: 'BryantWebRegular', sans-serif;
+	font-weight: normal;
 }
 
 #copyright {
