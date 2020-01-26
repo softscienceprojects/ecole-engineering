@@ -29,9 +29,9 @@
 and (max-device-width: 600px)
 and (orientation: portrait) {
     #logo {
-        font-size: 2rem;
+        font-size: 12vw;
         font-weight: bold;
-        line-height: 0.5rem;
+        line-height: 11vw !important;
     }
 }
 
@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container-fluid {
-    padding-top: 50px;
+    padding-top: 5px;
 }
 
 img {
