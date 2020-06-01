@@ -35,11 +35,15 @@ and (orientation: portrait) {
     }
 }
 
+body, div {
+    margin: 0;
+    /* width: 100%; */
+}
+
 /* CUSTOM CSS */
 
 h1, h2, h3, h4, h5, h6, p {
     font-family: 'BryantWebRegular', sans-serif;
-	font-weight: normal;
     font-style: normal;
 }
 
@@ -69,14 +73,53 @@ img {
 }
 
 #logo {
-    line-height: 70pt;
+    line-height: 50pt;
+}
+
+#intro-panel {
+    background-image: url('images/grid-background_darker.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* margin: 2.5%; */
+    /* width: 95vw; */
+    height: 95vh;
+}
+
+#logo-display {
+    /* position at the bottom/ center */
+    position: sticky;
+}
+
+#services-panel {
+    /* display: inline-block; */
+    /* position: relative; */
+}
+
+.row-1 {
+    display: inline-flex;
+    position: relative;
+    width: 100%;
+}
+
+.services-wrapper {
+    flex: 1;
+    margin: 10px;
+    /* width: 40%; */
+}
+
+.services-image {
+    height: 200px;
+    /* width: 100%; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* display: block; */
 }
 
 .services {
     background-color: #222A32;
     padding: 15px;
-    margin: 10px;
     color: #fff;
+    height: 200px;
 }
 
 .services li {
@@ -93,8 +136,8 @@ img {
     margin:0 5px 0 -15px;
 }
 
-#copyright {
+/* #copyright {
     font-size: 0.7em;
     margin: auto;
     text-align: center;
-}
+} */
