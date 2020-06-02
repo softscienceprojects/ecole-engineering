@@ -8,7 +8,7 @@
 	src: url('./webfonts/BryantWebRegular.eot?#iefix') format('embedded-opentype'),
          url('./webfonts/BryantWebRegular.woff2') format('woff2'),
          url('./webfonts/BryantWebRegular.woff') format('woff');
-	font-weight: normal;
+	/* font-weight: normal; */
 	font-style: normal;
 	}
 
@@ -17,7 +17,7 @@
 */
 .BryantWebRegular {
 	font-family: 'BryantWebRegular';
-	font-weight: normal;
+	/* font-weight: normal; */
 	font-style: normal;
 	}
 
@@ -44,7 +44,31 @@ body, div {
 
 h1, h2, h3, h4, h5, h6, p {
     font-family: 'BryantWebRegular', sans-serif;
-    font-style: normal;
+}
+
+h4 {
+    font-size: 1.5em;
+    margin: 0;
+    display: inline-flex;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1rem;
+    color: #fff;    
+    opacity: 0.6;
+    font-weight: normal;
+    display: inline;
+    transition: 0.3s;
+}
+
+p:hover {
+    opacity: 1;
+    font-size: 1.1rem;
+    transition: margin-left ease-in-out 2s;
+    cursor: none;
 }
 
 .lead {
@@ -108,18 +132,33 @@ img {
 }
 
 .services-image {
-    height: 200px;
-    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    height: 300px;
+    background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
-    /* display: block; */
+    /* background-color: #aaa;
+    background-blend-mode: color-burn; */
 }
 
 .services {
     background-color: #222A32;
     padding: 15px;
     color: #fff;
-    height: 200px;
+    height: 30px;
+}
+
+.services-desc {
+    display: flex;
+    background-color: #222222;
+    width: 80%;
+    height: 12em;
+    margin: auto;
+}
+
+.services-desc-text {
+    margin: auto 0;
 }
 
 .services li {
@@ -130,11 +169,19 @@ img {
 	font-weight: normal;
 }
 
-.services li:before {    
+.services-desc ul {    
+    list-style: none;
+}
+
+.services-desc li:hover:before {    
     font-family: 'FontAwesome';
     content: '\f105'; /*check: f00c */
-    margin:0 5px 0 -15px;
+    margin:0 15px 0 -15px;
+    color: #aaa;
+    transition: margin-left ease-in-out 1s;
+    display: inline-block;
 }
+
 
 /* #copyright {
     font-size: 0.7em;
