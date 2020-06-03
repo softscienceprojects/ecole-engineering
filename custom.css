@@ -46,8 +46,17 @@ h1, h2, h3, h4, h5, h6, p {
     font-family: 'BryantWebRegular', sans-serif;
 }
 
+h2 {
+    font-size: 2em;
+    color: #fff;
+}
+
+h3 {
+    font-size: 2em;
+}
+
 h4 {
-    font-size: 1.5em;
+    font-size: 1.1em;
     margin: 0;
     display: inline-flex;
     font-weight: bold;
@@ -98,7 +107,10 @@ img {
 
 #logo {
     line-height: 50pt;
+    font-size: 3.5em;
+    color: #fff;
 }
+
 
 #intro-panel {
     background-image: url('images/grid-background_darker.jpg');
@@ -111,12 +123,18 @@ img {
 
 #logo-display {
     /* position at the bottom/ center */
-    position: sticky;
+    position: absolute;
+    padding: 0 0 10px 10px;
+    bottom: 0;
 }
 
 /* #services-panel {
     /* display: inline-block; */
     /* position: relative; 
+} */
+
+/* .row {
+
 } */
 
 .row-1 {
@@ -150,7 +168,8 @@ img {
 }
 
 .services-desc {
-    display: flex;
+    display: none;
+    /* display: flex; */
     background-color: #222222;
     width: 80%;
     height: 12em;
@@ -158,6 +177,7 @@ img {
 }
 
 .services-desc-text {
+    display: flex;
     margin: auto 0;
 }
 
