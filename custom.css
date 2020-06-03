@@ -114,10 +114,10 @@ img {
     position: sticky;
 }
 
-#services-panel {
+/* #services-panel {
     /* display: inline-block; */
-    /* position: relative; */
-}
+    /* position: relative; 
+} */
 
 .row-1 {
     display: inline-flex;
