@@ -52,6 +52,11 @@ body, div {
   transition: opacity 500ms;
 }
 
+.darker-background {
+    background-color: #aaaaaa;
+    background-blend-mode: color-burn;
+}
+
 h1, h2, h3, h4, h5, h6, p {
     font-family: 'BryantWebRegular', sans-serif;
 }
