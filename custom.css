@@ -55,9 +55,17 @@ body, div {
 h1, h2, h3, h4, h5, h6, p {
     font-family: 'BryantWebRegular', sans-serif;
 }
+h2 {
+    font-size: 2em;
+    color: #fff;
+}
+
+h3 {
+    font-size: 2em;
+}
 
 h4 {
-    font-size: 1.5em;
+    font-size: 1.1em;
     margin: 0;
     display: inline-flex;
     font-weight: bold;
