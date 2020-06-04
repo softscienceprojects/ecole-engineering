@@ -42,6 +42,16 @@ body, div {
 
 /* CUSTOM CSS */
 
+.show {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+  
+.hide {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
 h1, h2, h3, h4, h5, h6, p {
     font-family: 'BryantWebRegular', sans-serif;
 }
@@ -150,12 +160,15 @@ img {
 }
 
 .services-desc {
+    /* display: none; */
     display: flex;
     background-color: #222222;
     width: 80%;
     height: 12em;
     margin: auto;
 }
+
+
 
 .services-desc-text {
     margin: auto 0;
