@@ -29,8 +29,7 @@ body, div {
 - - - > |  Mobile | < - - - 
 */
 
-@media only screen
-and (max-device-width: 901px) {
+@media (max-width: 701px) {
     #logo {
         font-size: 12vw;
         font-weight: bold;
@@ -38,15 +37,21 @@ and (max-device-width: 901px) {
     }
 
     .row-1 {
-        display: inline;
-        position: relative;
-        width: 100%;
+        display: block !important;
     }
     
     .services-wrapper {
         flex: 1;
         margin: 10px;
         /* width: 40%; */
+    }
+
+    p {
+        opacity: 0.8;
+    }
+
+    p:hover {
+        opacity: 1;
     }
 
 }
@@ -70,12 +75,13 @@ h1, h2, h3, h4, h5, h6, p {
     font-family: 'BryantWebRegular', sans-serif;
 }
 h2 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #fff;
 }
 
 h3 {
-    font-size: 1.3em;
+    font-size: 1.5em;
+    
 }
 
 h4 {
@@ -87,7 +93,7 @@ h4 {
     letter-spacing: 1px;
 }
 
-p {
+p.services-animation {
     font-size: 1rem;
     color: #fff;    
     opacity: 0.6;
@@ -96,12 +102,25 @@ p {
     transition: 0.3s;
 }
 
-p:hover {
+p.services-animation:hover {
     opacity: 1;
     font-size: 1.1rem;
     transition: margin-left ease-in-out 2s;
     cursor: none;
 }
+
+a {
+    font-size: 1em;
+    color: #aaa;
+    text-decoration: none;
+    float: right;
+}
+
+a:hover {
+    color: #fff;
+    transition: ease-in 0.5s;
+}
+
 
 
 .jumbotron {
@@ -131,25 +150,27 @@ img {
     background-image: url('images/grid-background_darker.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    /* margin: 2.5%; */
-    /* width: 95vw; */
     height: 95vh;
 }
 
 #logo-display {
-    /* position at the bottom/ center */
     position: absolute;
     padding: 0 0 10px 10px;
     bottom: 0;
 }
 
-/* #services-panel {
-    /* display: inline-block; */
-    /* position: relative; 
-} */
+.row {
+    margin: 10vh auto 0 auto;
+    padding: 1em;
+    color: #fff;
+    background-color: #222;
+    border: 3px solid #222;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
 
 .row-1 {
-    display: inline-flex;
+    display: flex;
     position: relative;
     width: 100%;
 }
@@ -157,7 +178,6 @@ img {
 .services-wrapper {
     flex: 1;
     margin: 10px;
-    /* width: 40%; */
 }
 
 .services-image {
@@ -192,7 +212,6 @@ img {
 }
 
 .services li {
-   /* list-style-type: square; */
     list-style: none;
     margin-left: -20px;
     font-family: 'BryantWebRegular', sans-serif;
@@ -213,8 +232,9 @@ img {
 }
 
 
-/* #copyright {
+#copyright {
     font-size: 0.7em;
     margin: auto;
     text-align: center;
-} */
+    text-transform: capitalize;
+}

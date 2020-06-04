@@ -1,9 +1,20 @@
 const servicesImageDivs = document.querySelectorAll('.services-image');
-//window.innerWidth >= 1200 : massive screen, put margins on the sides
-//window.innerWeidth <= 900 : small screen, single column only
+const serviceImageDesc = document.querySelectorAll('.services-desc');
 
-updateWindowFunctionality = function() {
-    if (window.innerWidth <= 900) {
+// const resetFromPageLoad = {
+//     'removeBackground': servicesImageDivs && servicesImageDivs ? servicesImageDivs.classList.remove('darker-background') : undefined,
+//     'removeShow': serviceImageDesc ? servicesImageDesc.classList.remove('show') : undefined,
+//     'addHide': serviceImageDesc ? servicesImageDesc.classList.add('hide') : undefined
+// }
+
+updateWindowFunctionality = function(resetOptions = null) {
+    if (resetOptions && typeof(resetOptions) === 'function') {
+        for (func in resetOptions) {
+            func()
+        };
+    }
+
+    if (window.innerWidth <= 700) {
         mobileView();
     } else {
         desktopView();
@@ -27,19 +38,7 @@ checkHeightPos = function() {
 
 
 mobileView = function() {
-    window.addEventListener('scroll', checkHeightPos)
-        
-            //     console.log(boundingRect.top)
-            //    console.log(window.innerHeight)
-            // servicesImageDivs[i].addEventListener("mouseover", function() {      
-            // });
-            // servicesImageDivs[i].addEventListener("mouseout", function() {
-            //     servicesImageDivs[i].classList.remove('darker-background');
-            //     let description = servicesImageDivs[i].querySelector('.services-desc')
-            //     description.classList.remove('show');
-            //     description.classList.add('hide');        
-            // });
-    
+    window.addEventListener('scroll', checkHeightPos)    
 };
 
 
@@ -60,6 +59,9 @@ desktopView = function() {
     };
 };
 
+
+
+// window.addEventListener('resize', updateWindowFunctionality(resetFromPageLoad));
 window.addEventListener('resize', updateWindowFunctionality);
 window.addEventListener('load', updateWindowFunctionality);
 
