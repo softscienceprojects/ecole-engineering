@@ -108,7 +108,10 @@ img {
 
 #logo {
     line-height: 50pt;
+    font-size: 3.5em;
+    color: #fff;
 }
+
 
 #intro-panel {
     background-image: url('images/grid-background_darker.jpg');
@@ -121,7 +124,9 @@ img {
 
 #logo-display {
     /* position at the bottom/ center */
-    position: sticky;
+    position: absolute;
+    padding: 0 0 10px 10px;
+    bottom: 0;
 }
 
 /* #services-panel {
