@@ -1,3 +1,7 @@
+body, div {
+    margin: 0;
+}
+
 /*
 - - - > |  @font-face  | < - - - 
 */
@@ -26,21 +30,26 @@
 */
 
 @media only screen
-and (max-device-width: 600px)
-and (orientation: portrait) {
+and (max-device-width: 901px) {
     #logo {
         font-size: 12vw;
         font-weight: bold;
         line-height: 11vw !important;
     }
-}
 
-body, div {
-    margin: 0;
-    /* width: 100%; */
-}
+    .row-1 {
+        display: inline;
+        position: relative;
+        width: 100%;
+    }
+    
+    .services-wrapper {
+        flex: 1;
+        margin: 10px;
+        /* width: 40%; */
+    }
 
-/* CUSTOM CSS */
+}
 
 .show {
     opacity: 1;
@@ -61,12 +70,12 @@ h1, h2, h3, h4, h5, h6, p {
     font-family: 'BryantWebRegular', sans-serif;
 }
 h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     color: #fff;
 }
 
 h3 {
-    font-size: 2em;
+    font-size: 1.3em;
 }
 
 h4 {
@@ -94,14 +103,6 @@ p:hover {
     cursor: none;
 }
 
-.lead {
-    font-weight: bold;
-    font-size: 1rem !important;
-}
-
-.navbar {
-    background-color: #fff;
-}
 
 .jumbotron {
     background-image: url("./images/grid-background.jpg");
@@ -166,8 +167,6 @@ img {
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
-    /* background-color: #aaa;
-    background-blend-mode: color-burn; */
 }
 
 .services {
