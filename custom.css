@@ -35,9 +35,9 @@ body {
 
 @media (max-width: 701px) {
     #logo {
-        font-size: 12vw;
+        font-size: 3em !important;
         font-weight: bold;
-        line-height: 11vw !important;
+        line-height: 1em !important;
     }
 
     .row-1 {
@@ -50,8 +50,18 @@ body {
 
     .services-wrapper {
         flex: 1;
-        margin: 10px;
+        margin: 5px;
         /* width: 40%; */
+    }
+
+    .services-desc li:hover:before {    
+        margin:0 5px 0 -5px !important;
+        transition: margin-left ease-in-out 1s;
+        display: inline-block;
+    }
+
+    ul {
+        padding-inline-start: 30px;
     }
 
     p {
@@ -60,6 +70,10 @@ body {
 
     p:hover {
         opacity: 1;
+    }
+
+    #copyright {
+        text-align: center !important;
     }
 
 }
@@ -171,7 +185,7 @@ img {
 }
 
 .row {
-    margin: 0 auto 0 auto;
+    margin: 40px;
     padding: 1em;
     color: #fff;
     background-color: #222A32;
@@ -186,7 +200,7 @@ img {
 
 .services-wrapper {
     flex: 1;
-    margin: 10px;
+    margin: 0 30px;
 }
 
 .services-image {
