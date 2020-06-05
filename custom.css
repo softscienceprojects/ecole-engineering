@@ -75,8 +75,8 @@ body {
     #copyright {
         text-align: center !important;
     }
-
 }
+
 
 .show {
     opacity: 1;
@@ -182,6 +182,19 @@ img {
     position: absolute;
     padding: 0 0 10px 10px;
     bottom: 0;
+}
+
+@media (min-width: 2000px) {
+
+    .wide-screen {
+      display: inline-block !important;
+      width: 10%;
+    }
+
+}
+
+.wide-screen {
+    display: none;
 }
 
 .row {
