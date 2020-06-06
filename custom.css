@@ -3,7 +3,7 @@ body, div {
 }
 
 body {
-    background-color: #000;
+    background-color: #111;
 }
 
 .junkmail {
@@ -209,7 +209,7 @@ img {
     margin: 40px;
     padding: 1em;
     color: #fff;
-    background-color: #000;
+    background-color: #111;
     font-weight: bold;
 }
 
@@ -234,7 +234,7 @@ img {
 }
 
 .services {
-    background-color: #000;
+    background-color: #111;
     padding: 15px;
     color: #fff;
     height: 30px;
@@ -243,7 +243,7 @@ img {
 .services-desc {
     /* display: none; */
     display: flex;
-    background-color: #000;
+    background-color: #111;
     width: 80%;
     height: 12em;
     margin: auto;
