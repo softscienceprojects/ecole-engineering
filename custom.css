@@ -6,6 +6,10 @@ body {
     background-color: #000;
 }
 
+.junkmail {
+    display: none;
+}
+
 /*
 - - - > |  @font-face  | < - - - 
 */
@@ -76,7 +80,7 @@ body {
         text-align: center !important;
     }
 
-    a {
+    p.email {
         padding: 0 !important;
     }
 }
@@ -141,11 +145,11 @@ p.services-animation:hover, p.services-animation:active {
     cursor: none;
 }
 
-a {
+p.email {
     font-size: 1em;
     color: #aaa;
     text-decoration: none;
-    float: right;
+    /* float: right; */
     padding-left: 20px;
 }
 
